@@ -546,6 +546,7 @@ nav .crossbtn{
     .footer{
         height:20vh;
         white-space:nowrap; 
+        padding:5px;
         h1{
             font-size:10vh;
         }
@@ -554,6 +555,9 @@ nav .crossbtn{
         display:grid;
         grid-template-column: repeat (1,1fr);
         grid-template-row: repeat (2,1fr);
+        .leftside{
+            display: none;
+        }
     }
     
     
