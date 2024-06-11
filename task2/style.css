@@ -1,0 +1,548 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+#cursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    position: fixed;
+    z-index: 999;
+}
+main{
+    width: 100%;
+    height:100%;
+    background: black;
+    color: white;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 80px;
+}
+nav .nav-part{
+    display: flex;
+   gap: 25px;
+   text-transform: capitalize;
+   font-weight: 600;
+   
+}
+nav .nav-part a{
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+nav .logo{
+    width: 60px;
+    height: 100%;
+}
+nav .logo img{
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+nav .menubtn{
+    display: none;
+}
+nav .crossbtn{
+    display: none;
+}
+
+
+
+.page1{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.page1 .leftside{
+    width: 50%;
+    height: 100%;
+    display: flex;
+   padding-left:5vw ;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.page1 .leftside h1{
+    font-size: 4vw;
+    text-transform: capitalize;
+    text-shadow:5px 5px 5px rgba(0, 0, 0, 0.213);
+}
+.page1 .leftside h1 span{
+    font-size: 70px;
+    font-weight: 900;
+    background: linear-gradient(135deg,#ff00d2,#fed90f,#00a2ff,#09f1b8,#ff00d2,#fed90f,#00a2ff,#09f1b8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation:gradient 8s ease-in-out infinite;
+}
+
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 100% 50%
+    }
+    
+}
+.page1 .leftside .buttonbox{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 1vw 0;
+}
+.buttonbox a{
+    color: white;
+    background: #000;
+    text-decoration: none;
+    font-weight: 700; 
+    white-space: nowrap; 
+    padding: 1vw 5vw;
+    border-radius: 50px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+.buttonbox a::before{
+    content: "Download CV";
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 100%;
+    border-radius: 50%;
+    transition: 0.1s  all ease;
+}
+.buttonbox a:nth-child(2):before{
+    content: "Preview";
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 100%;
+    border-radius: 50%;
+    transition: 0.1s  all ease;
+}
+.buttonbox a:hover::before{
+    top: 0;
+    border-radius: 50px;
+}
+.page1 .leftside .socialbox{
+    width: fit-content;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.page1 .leftside .socialbox a{
+    color: white;
+    text-decoration: none;
+    width: 4vw;
+    height:4vw ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.linkdin:hover{
+    box-shadow: 0 0 30px rgba(115, 115, 246, 0.553),
+    inset 0 0 50px rgba(103, 103, 252, 0.502);
+}
+.instagram:hover{
+    box-shadow: 0 0 30px rgb(255, 0, 51),
+    inset 0 0 50px rgb(255, 0, 51);
+}
+.whatsapp:hover{
+    box-shadow: 0 0 30px rgb(8, 251, 8),
+    inset 0 0 50px rgb(13, 238, 13);
+}
+.github:hover{
+    box-shadow: 0 0 30px rgba(241, 239, 239, 0.187),
+    inset 0 0 50px rgba(235, 231, 231, 0.219);
+}
+.page1 .rightside{
+    width: 50%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.page1 .rightside .imgback{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.page1 .rightside .imgback img{
+    width:25vw;
+    height:32vw;
+    background-position: center;
+    background-size: cover;
+    transition: transform 1s ease;
+}
+
+.rightside .imgback img:hover{
+    transform: scale(1.1);
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px 50px;
+}
+.page2 .cardbox{
+   width: 100%;
+   height: 70%;
+   gap: 20px;
+   display: flex;
+}
+.page2 .cardbox .skillcard{
+   width:40%;
+   height: 100%;
+   background: white;
+   border-radius: 10px;
+   border-radius: 20px;
+   display:grid;
+   place-items: center;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+
+}
+.page2 .cardbox .skillcard .text{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background:#00000010;
+    color: black;
+    bottom: -100%;
+    position: absolute;
+    padding: 30px 50px;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+   gap: 20px;
+   letter-spacing: 1px;
+   z-index: 9;
+}
+.page2 h1{
+    letter-spacing: 2px;
+}
+.page2 .cardbox .skillcard:hover .text{
+   bottom:0;
+}
+.viewmore{
+    padding: 15px 65px;
+    background: crimson;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+}
+.viewmore:hover{
+    background: rgba(220, 20, 60, 0.861);
+}
+
+.page2 .cardbox .skillcard video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.page3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 70px;
+}
+.page3 h1{
+    margin-bottom: 20px;
+}
+.page3 .viewmore{
+    margin-top: 20px;
+}
+.page3 .projectbox{
+    width: 100%;
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;   
+}
+.page3 .projectbox .projectcard{
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   overflow: hidden;
+   background: black;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+.page3 .projectbox .projectcard .projdetailtext{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background:#00000010;
+    color: black;
+    bottom: -100%;
+    position: absolute;
+    padding: 30px 50px;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+   letter-spacing: 1px;
+   z-index: 9;
+}
+.page3 .projectbox .projectcard:hover .projdetailtext{
+    bottom: 0;
+}
+.page3 .projectbox .projectcard .projdetailtext .projectlink{
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+   width: fit-content;
+   padding: 5px 30px;
+   border-radius: 5px;
+   box-shadow: 5px 5px 0 black;
+   transition: 0.5s all ease-in-out;
+}
+.page3 .projectbox .projectcard .projdetailtext .projectlink:hover{
+    transform: translate(5px,5px);
+    box-shadow: 0 0 0 transparent;
+}
+.page4{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.page4 .aboutme{
+   width: 100%;
+   height: 30%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+  margin-bottom: 50px;
+   gap: 20px;
+
+.abtp{
+    width: 80%;
+    font-size: 20px;
+    line-height: 25px;
+   border-left: 5px solid white;
+   border-right: 5px solid white;
+    padding: 20px 40px;
+   overflow: hidden;
+   }
+
+   
+   
+}
+.page4 .education{
+    width: 100%;
+    height: calc(100vh - 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    .educ-div{
+        width: 100%;
+        height: 80%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .mitcard{
+            width: 80%;
+            height: 120px;
+            display: flex;
+            background: white;
+            color: black;
+            img{
+                width:200px;
+                height: 100%;
+                
+            }
+            .mittext{
+                padding: 10px 20px;
+                gap: 5px;
+                h2{
+                    color: rgba(0, 0, 0, 0.667);
+                }
+
+                h3{
+                    color: rgb(21, 206, 21);
+                }
+            }
+            
+        }
+
+        .bcgcard{
+            width: 80%;
+            height: 120px;
+            display: flex;
+            background: white;
+            color: black;
+            img{
+                width: 200px;
+                height: 100%;
+            }
+            .bcgtext{
+                padding:10px 20px;
+                gap: 5px;
+                h2{
+                    color: rgba(0, 0, 0, 0.667);
+                }
+                h3{
+                    color: rgb(21, 206, 21);
+                }
+            }
+
+        }
+    }
+}
+
+
+.page5{
+    width: 100%;
+    height: calc(100vh - 8vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page5 .leftside{
+    width: 50%;
+    height: 100%;
+    transition: 0.5s all ease-in-out;
+    background: white;
+    overflow: hidden;
+}
+.page5 .leftside video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;  
+}
+.page5 .leftside:hover{
+    transform: scale(0.95);
+    border-radius: 10px;
+}
+.page5 .rightside{
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-size: 30px;
+    padding: 60px 60px;
+}
+.page5 .rightside form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+}
+.page5 .rightside input{
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    outline: none;
+}
+.page5 .rightside textarea{
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+
+}
+.page5 .rightside button{
+    width: 50%;
+   height: 40px;
+    display: grid;
+    place-content: center;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
+.page5 .rightside button:active{
+    transform: scale(0.9);
+
+}
+.page5 .rightside .check input{
+    border: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0;
+    outline: none;
+}
+.footer{
+    width: 100%;
+    height: 8vh;
+    position: relative;
+   display: grid;
+   place-items: center;
+}
+.footer h1{
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.756);
+    position: absolute;
+    bottom: 0;
+   
+}
+
+
+
+
