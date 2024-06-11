@@ -542,6 +542,23 @@ nav .crossbtn{
     bottom: 0;
    
 }
+@media (max-width:400px){
+    .footer{
+        height:20vh;
+        white-space:nowrap; 
+        h1{
+            font-size:10vh;
+        }
+    }
+    .page5{
+        display:grid;
+        grid-template-column: repeat (1,1fr);
+        grid-template-row: repeat (2,1fr);
+    }
+    
+    
+}
+    
 
 
 
