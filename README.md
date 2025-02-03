@@ -16,3 +16,5 @@ To get started, you need to **install** the project. Run the following commands:
 git clone https://github.com/yourusername/awesome-project.git
 cd awesome-project
 npm install
+
+![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
