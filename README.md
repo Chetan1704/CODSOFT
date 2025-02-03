@@ -12,9 +12,9 @@ Welcome to **Awesome Project**! This is a project that does amazing things and m
 
 To get started, you need to **install** the project. Run the following commands:
 
+![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
 ```bash
 git clone https://github.com/yourusername/awesome-project.git
 cd awesome-project
 npm install
-
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
